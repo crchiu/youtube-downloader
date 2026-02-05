@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  youtube-downloader:
+    build: .
+    container_name: youtube_downloader_api
+    ports:
+      - "8833:8000"
+    volumes:
+      - ./downloads:/downloads
+    restart: unless-stopped
